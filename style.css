@@ -1,0 +1,64 @@
+.inter-extraLight {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.nav{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: purple;
+
+
+}
+
+#logo{
+
+    font-family: "Inter";
+    font-size: 50px;
+    color: black;
+
+}
+
+.nav-list{
+
+    display: flex;
+    list-style: none;
+
+}
+
+.nav-item{
+    margin-right: 50px;
+    align-content: center;
+    text-align: center;
+    font-family: "Inter", sans-serif; 
+    background-color: aqua;
+    
+    
+}
+
+.nav-link{
+
+    text-decoration: none;
+    color: black;
+    text-decoration-color: rgb(255, 255, 255);
+    transition: linear 0.3s;
+
+}
+
+.nav-link::after{
+
+    content:'';
+
+}
+
+.nav-link:hover{
+
+    text-decoration: underline;
+    text-decoration-color: red;
+
+}
+
