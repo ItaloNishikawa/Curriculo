@@ -62,10 +62,15 @@
 
 }
 
+#logo-font{
+    color: #f6f6f6;
+    font-size: 11px;
+}
+
 .footer{
 
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 20px;
     background-color: #333333;
 
@@ -80,12 +85,13 @@
 
 .footer-col ul {
     list-style: none;
-    padding: 0;
+    justify-items: center;
     
 }
 
 .footer-col ul li {
     margin-bottom: 10px;
+    
     
 }
 
@@ -93,5 +99,6 @@
 
     text-decoration: none;
     color: #f6f6f6  ;
+    font-size: 13px;
 
 }
