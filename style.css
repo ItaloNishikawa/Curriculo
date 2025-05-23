@@ -80,12 +80,13 @@
 .footer-col {
     flex: 1;
     margin: 0 6px;
+    border: solid 1px red;  
     
 }
 
 .footer-col ul {
     list-style: none;
-    justify-items: center;
+    justify-items: start;
     
 }
 
@@ -93,6 +94,14 @@
     margin-bottom: 10px;
     
     
+}
+
+.footer-col ul li{
+
+    text-decoration: none;
+    color: #f6f6f6  ;
+    font-size: 13px;
+
 }
 
 .footer-col ul li a{
