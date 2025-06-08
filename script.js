@@ -1,41 +1,21 @@
-const menu = document.querySelector("nav");
-    const openMenu = document.getElementById("openMenu");
-    const closeMenu = document.getElementById("closeMenu");
+document.addEventListener('DOMContentLoaded', function() {
+    const openMenuBtn = document.getElementById('openMenu');
+    const closeMenuBtn = document.getElementById('closeMenu');
+    const navLinks = document.querySelectorAll('.nav-link');
 
-    function isMobile() {
-        return window.innerWidth <= 717;
+    function toggleMenu() {
+        document.body.classList.toggle('menu-open');
     }
 
-    
-    openMenu.addEventListener('click', () => {
-        menu.style.display = "flex";
-        menu.style.right = (menu.offsetWidth * -1) + 'px';
+    openMenuBtn.addEventListener('click', toggleMenu);
+    closeMenuBtn.addEventListener('click', toggleMenu);
 
-        setTimeout(() => {
-            menu.style.opacity = '1';
-            menu.style.right = '0';
-            openMenu.style.display = 'none'; // Esconde o botão ☰
-        }, 10);
+    // Fecha o menu ao clicar em um link (útil para navegação em página única)
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            if (document.body.classList.contains('menu-open')) {
+                toggleMenu();
+            }
+        });
     });
-
-
-    closeMenu.addEventListener('click', () => {
-        menu.style.opacity = '0';
-        menu.style.right = (menu.offsetWidth * -1) + 'px';
-
-        setTimeout(() => {
-            menu.removeAttribute('style');
-            openMenu.removeAttribute('style'); // Mostra o botão ☰ de novo
-        }, 200);
-    });
-
-    window.addEventListener("resize", () => {
-        if (!isMobile()) {
-            menu.removeAttribute('style');
-            openMenu.removeAttribute('style');
-        } else {
-            menu.style.display = 'none';
-            menu.style.opacity = '0';
-            menu.style.right = (menu.offsetWidth * -1) + 'px';
-        }
-    });
+});
