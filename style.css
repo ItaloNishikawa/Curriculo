@@ -12,7 +12,7 @@ body, a, li, h1, p {
 h2, h3 {
   font-family: 'Playfair Display', serif;
   font-size: 28px;
-  color: #333333;
+
 }
 
 /* =============================
@@ -22,6 +22,10 @@ h2, h3 {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+li{
+  list-style: none;
 }
 
 /* =============================
@@ -183,7 +187,7 @@ nav {
   font-size: 40px;
 }
 
-.info span {
+.emphasis {
   background-color: #990100;
   color: #f6f6f6;
   padding: 10px 30px;
@@ -191,14 +195,14 @@ nav {
   font-size: 12px;
 }
 
-.birthdate{
+#birthdate-position{
     position: absolute;
     top: 80px;
     left: -40px;
     z-index: 3;
 }
 
-.nationality{
+#nationality-position{
     position: absolute;
     top: 160px;
     right: -30px;
@@ -215,6 +219,57 @@ nav {
   margin-bottom: 10px;
 }
 
+.skills, .education ul {
+  list-style: none;
+}
+
+.education{
+  color: #f6f6f6;
+  padding-inline: 40px;
+  padding-top: 10px;
+  padding-bottom: 30px;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.experience{
+
+  background-color: #F6EFE1;
+  color: #333333;
+  padding-inline: 40px;
+  padding-top: 10px;
+  padding-bottom: 30px;
+  margin-top: 30px;
+  text-align: center;
+  
+}
+
+#position-skill{
+  background-color: #333333;
+}
+
+.activities, .about-me {
+  padding: 20px;
+  margin: 50px;
+  flex: 1; /* Permite que as seções cresçam bem */
+}
+
+li {
+  margin: 15px 0; /* Espaçamento entre os itens */
+}
+
+
+.about-me ul, .skills ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.about-me li, .skills li {
+  text-align: center;
+  width: 120px;
+}
+
 /* =============================
    Cores secundárias
 ============================= */
@@ -228,7 +283,7 @@ nav {
 ============================= */
 .session-division {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-around;
   padding: 40px;
   flex-wrap: wrap;
 }
@@ -268,6 +323,12 @@ footer {
 .footer-col ul li a {
   text-decoration: none;
   color: #f6f6f6;
+  transition: linear 0.3s;
+}
+
+.footer-col ul li a:hover {
+  text-decoration: underline;
+  text-decoration-color: #f6f6f6;
 }
 
 #logo-footer {
@@ -347,19 +408,19 @@ a {
   }
 
   .profile-img {
-    width: 160px;
-    top: -60px;
+    width: 208px;
+    top: -50px;
   }
 
   .birthdate {
     top: 60px;
-    left: 0;
+    left: 10;
     font-size: 12px;
   }
 
   .nationality {
     top: 120px;
-    right: 0;
+    right: 10;
     font-size: 12px;
   }
 
