@@ -4,9 +4,12 @@ Paletas de Cores Usadas
 
 #e8e8e8     Fundo secundário, elementos de apoio
 
+#f6efe1     Fundo secundário, elementos de apoio
+
 #333333     Texto primário (ótimo contraste)    
 
 #990100     Ações importantes (botões, links)
 
 #b90504     Destaques e hover/efeitos de ação
 
+#450000     Destaques e hover/efeitos de ação
